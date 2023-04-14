@@ -120,10 +120,21 @@ def run_tracker_server(addr: str, port: int, use_device: List[str], ignore_not_f
                     ]
                 )
                 client.send_message(
-                    f"/tracking/trackers/{i+1}/rotation",
+                    f"/tracking/trackers/{i+1}/rotation/x",
                     [
                         rot_x,
+                    ]
+                )
+                client.send_message(
+                    f"/tracking/trackers/{i+1}/rotation/y",
+                    [
                         rot_y,
+                    ]
+                )
+                client.send_message(
+                    f"/tracking/trackers/{i+1}/rotation/z",
+                    [
+
                         rot_z,
                     ]
                 )
