@@ -64,3 +64,12 @@ VRChatを起動し、OSC機能を有効にしてください。
 
 MITライセンスです。  
 詳しくはLICENSEファイルをご確認ください。  
+
+## Build instructions
+Put WX and openVR folders in build directory then run the following:
+
+`pyinstaller --noconfirm --onedir --console --add-data "./openvr;openvr/" --add-data "./wx;wx/" --paths "./quest_steamvr_fbt_tool-win"  "./quest_steamvr_fbt_tool.py"`
+
+if wx errors occur on windows install, use the following:
+extract and install this wheel using pip install 
+https://github.com/wxWidgets/Phoenix/files/10404385/wxPython-4.2.1a1-cp311-cp311-win_amd64.whl.zip
