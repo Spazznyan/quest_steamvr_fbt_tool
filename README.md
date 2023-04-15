@@ -68,7 +68,7 @@ MITライセンスです。
 ## Build instructions
 Put WX and openVR folders in build directory then run the following:
 
-`pyinstaller --noconfirm --onedir --console --add-data "./openvr;openvr/" --add-data "./wx;wx/" --paths "./quest_steamvr_fbt_tool-win"  "./quest_steamvr_fbt_tool.py"`
+`pyinstaller --noconfirm --onedir --console --add-data "./openvr;openvr/" --add-data "./wx;wx/" --paths "./quest_steamvr_fbt_tool-win"  "./quest_steamvr_fbt_tool.py" --icon "qsft.png"`
 
 if wx errors occur on windows install, use the following:
 extract and install this wheel using pip install 
