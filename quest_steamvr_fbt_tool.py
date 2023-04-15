@@ -112,10 +112,20 @@ def run_tracker_server(addr: str, port: int, use_device: List[str], ignore_not_f
                 pos_x, pos_y, pos_z = get_position(m)
                 rot_x, rot_y, rot_z = get_euler_angle(m)
                 client.send_message(
-                    f"/tracking/trackers/{i+1}/position",
+                    f"/tracking/trackers/{i+1}/position/x",
                     [
                         -pos_x, # マイナスにしないと向きが逆になる
+                    ]
+                )
+                client.send_message(
+                    f"/tracking/trackers/{i+1}/position/y",
+                    [
                         pos_y + y_delta,
+                    ]
+                )
+                client.send_message(
+                    f"/tracking/trackers/{i+1}/position/z",
+                    [
                         pos_z,
                     ]
                 )
